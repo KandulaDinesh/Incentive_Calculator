@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slab Incentive Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calculator">
+    <h2>Slab Incentive Calculator</h2>
+
+    <label for="pipe">Pipe Target</label>
+    <input type="number" id="pipe" placeholder="Enter Pipe Target" step="0.01">
+
+    <label for="achieved">Achievement</label>
+    <input type="number" id="achieved" placeholder="Enter Achievement" step="0.01">
+
+    <button onclick="calculate()">Calculate</button>
+
+    <div class="result" id="result"></div>
+    <div class="breakdown" id="breakdown"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
