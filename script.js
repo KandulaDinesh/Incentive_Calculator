@@ -32,10 +32,23 @@ function calculate() {
     steps.push(`${(percent - 100).toFixed(2)}% × 2 = ${third.toFixed(2)}%`);
   }
 
+  // 🎯 Interactive message
+  let message = "";
+  if (percent >= 100) {
+    message = "🎉 Congrats! You hit 100% (or more). Amazing job!";
+  } else if (percent >= 90) {
+    message = "🔥 So close! You’re in the 90s - just missed by a little!";
+  } else if (percent < 50) {
+    message = "⚠️ Not eligible for the SPIFF - below 50% achievement.";
+  } else {
+    message = "👍 Keep going!";
+  }
+
   // Show results
   document.getElementById("result").innerHTML = `
     <p>📊 Percentage Achieved: <span class="highlight">${percent.toFixed(2)}%</span></p>
     <p>🏆 Final Percentage (with slabs): <span class="highlight">${finalPercent.toFixed(2)}%</span></p>
+    <p><strong>${message}</strong></p>
   `;
 
   // Show breakdown
